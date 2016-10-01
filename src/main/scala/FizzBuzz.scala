@@ -1,8 +1,10 @@
 class FizzBuzz() {
-  def play(number: Int): String = {
-    if (number % 15 == 0) return "FizzBuzz"
-    if (number % 3 == 0) return "Fizz"
-    if (number % 5 == 0) return "Buzz"
-    number.toString()
+  def play(num: Int): String = num match {
+    case num if isDivisibleBy(15, num) => "FizzBuzz"
+    case num if isDivisibleBy(5, num) => "Buzz"
+    case num if isDivisibleBy(3, num) => "Fizz"
+    case _ => num.toString()
   }
+
+  def isDivisibleBy(div: Int, num: Int) = num % div == 0
 }
