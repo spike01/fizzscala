@@ -19,10 +19,10 @@ class FizzBuzzSpec extends FlatSpec with Matchers {
     fizzbuzz.play(30) shouldBe "FizzBuzz"
   }
 
-  it should "pass the number through (as a string) otherwise" in {
+  it should "pass the number through otherwise" in {
     val fizzbuzz = new FizzBuzz()
-    fizzbuzz.play(1) shouldBe "1"
-    fizzbuzz.play(7) shouldBe "7"
-    fizzbuzz.play(28) shouldBe "28"
+    fizzbuzz.play(1) shouldBe 1
+    fizzbuzz.play(7) shouldBe 7
+    fizzbuzz.play(28) shouldBe 28
   }
 }
